@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Baloo Tamma 2', cursive;
+}
+
+section{
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow-x: hidden;
+}
+
+header {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 10%;
+}
+
+.logo, nav ul, .cart {
+	display: flex;
+}
+
+.logo img {
+	margin-right: 5px;
+}
+
+.logo p {
+	font-weight: bold;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul li a {
+	text-decoration: none;
+	padding: 12px 20px;
+	transition: .3s;
+	color: #cc33bf;
+}
+
+nav ul li a:hover {
+	background-color: #cc33bf;
+	color: #fff;
+}
+
+main {
+	height: 90%;
+	display: flex;
+	align-items: center;
+	width: 90%;
+	margin: auto;
+}
+
+.info {
+	flex: 1;
+}
+
+.info h2 {
+	font-size: 45px;
+}
+
+.info p {
+	font-size: 18px;
+}
+
+.btn-group {
+	margin-top: 25px;
+}
+
+.btn-group button:nth-child(1) {
+	border: none;
+	font-size: 18px;
+	width: 150px;
+	padding: 10px 0;
+	color: #cc33bf;
+	border: 2px solid #cc33bf;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.btn-group button:nth-child(2) {
+	border: none;
+	font-size: 18px;
+	width: 150px;
+	padding: 10px 0;
+	color: #fff;
+	background-color: #cc33bf;
+	border: 2px solid #cc33bf;
+	cursor: pointer;
+}
+
+.display {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.display>img {
+	width: 65%;
+	filter: drop-shadow(0px 3px 3px rgb(82, 82, 82));
+	align-self: center;
+	animation: mymove 1.5s;
+}
+
+@keyframes mymove {
+	0% {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.indicator {
+	display: flex;
+	align-self: center;
+	margin-top: 70px;
+	opacity: .7;
+}
+
+.indicator img {
+	margin-right: 10px;
+	width: 15px;
+	height: 25px;
+	cursor: pointer;
+}
+
+.big-eclipse {
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: .3;
+	width: 40%;
+	z-index: -1;
+}
+
+.mid-eclipse {
+	position: absolute;
+	top: 18%;
+	right: 25%;
+	opacity: .2;
+	z-index: -1;
+	width: 35%;
+}
+
+.small-eclipse {
+	position: absolute;
+	bottom: 0;
+	right: 55%;
+	opacity: .5;
+	z-index: -1;
+	width: 20%;
+}
+
+
+
+@media (max-width: 950px) {
+	
+	.info h2 {
+		font-size: 36px;
+	}
+
+	.info p {
+		font-size: 17px;
+	}
+
+	.btn-group button {
+		font-size: 16px !important;
+		width: 140px !important;
+		padding: 5px 0 !important;
+	}
+		
+	.display>img {
+		width: 90%;
+		filter: drop-shadow(0px 3px 3px rgb(82, 82, 82));
+		align-self: center;
+	}
+
+	.indicator {
+		display: flex;
+		align-self: center;
+		margin-top: 30px;
+		opacity: .7;
+	}
+		
+	.indicator img {
+		margin-right: 10px;
+		width: 12px;
+		cursor: pointer;
+	}
+
+	.small-eclipse {
+		display: none;
+	}
+
+}
+
+@media (max-width: 768px) {
+		
+	main {
+		flex-direction: column;
+		text-align: center;
+		margin-top: 70px;
+	}
+
+	.display>img {
+		width: 50%;
+		filter: drop-shadow(0px 3px 3px rgb(82, 82, 82));
+		align-self: center;
+	}
+
+	.indicator {
+		margin: 0px 0 25px 0;
+	}
+
+	.indicator img {
+		width: 10px;
+	}
+} 
+
+
+@media (max-width: 500px) {
+	
+	header {
+		flex-direction: column;
+		padding: 15px 0;
+		position: relative;
+	}
+
+	header .cart {
+		position: absolute;
+		right: 0px;
+		top: 10px;
+	}
+
+	header nav {
+		margin-top: 20px;
+	}
+
+	nav ul li a {
+		padding: 5px 20px;
+	}
+}
